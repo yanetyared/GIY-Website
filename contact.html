@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Global Impact Youth Club (GIY)</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f8f9fa, #e3f2fd);
+      margin: 0;
+      padding: 0;
+      font-size: 19px; /* ⬅️ Increased all base text size slightly */
+    }
+
+    /* Top bar */
+    .topbar {
+      background: #4b48ef;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 45px 50px;
+      flex-wrap: wrap;
+    }
+    .topbar .logo {
+      font-weight: bold;
+      font-size: 2.1rem; /* ⬅️ Bigger logo text */
+    }
+    .topbar a {
+      color: white;
+      text-decoration: none;
+      margin: 10px;
+      font-weight: bold;
+      font-size: 1.1rem; /* ⬅️ Bigger menu links */
+      transition: color 0.3s;
+    }
+    .topbar a:hover {
+      color: yellow;
+    }
+
+    /* Contact Section */
+    section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 35px;
+      color: #333;
+      font-size: 2.3rem; /* ⬅️ Bigger main heading */
+    }
+    p.subtitle {
+      text-align: center;
+      margin-bottom: 45px;
+      color: #555;
+      font-size: 1.2rem;
+    }
+
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      background: rgb(199, 194, 194);
+      padding: 50px;
+      border-radius: 14px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .info-box, .social-card {
+      background: #f0f2f5;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      font-size: 1.1rem;
+    }
+
+    .info-box h3, .social-card h2 {
+      margin-top: 0;
+      color: #222;
+      font-size: 1.4rem; /* ⬅️ Bigger section titles */
+    }
+
+    .social-card ul {
+      list-style: none;
+      padding: 0px;
+    }
+    .social-card ul li {
+      margin: 12px 0;
+      font-size: 1.2rem;
+    }
+    .social-card ul li a {
+      text-decoration: none;
+      color: #4b48ef;
+      font-weight: bold;
+      font-size: 1.8rem;
+    }
+
+    /* Social Media Connect Section */
+    .social-media {
+      text-align: center;
+      margin-top: 60px;
+      background-color: #e8eaff;
+      padding: 35px;
+      border-radius: 30px;
+      max-width: 750px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 2rem;
+    }
+
+    .social-media h2 {
+      color: #4b48ef;
+      font-size: 2rem;
+    }
+
+    .social-media a {
+      color: #4b48ef;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .social-media a:hover {
+      text-decoration: underline;
+      color: #2c2aff;
+    }
+
+    /* Chatbot styles */
+    #chatbot-btn {
+      position: fixed;
+      right: 20px;
+      bottom: 50px;
+      background: #4b48ef;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 17px 22px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1rem;
+      z-index: 1000;
+    }
+    #chatbot-box {
+      display: none;
+      position: fixed;
+      right: 20px;
+      bottom: 110px;
+      width: 320px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      padding: 10px;
+      z-index: 1000;
+    }
+    #chatbot-box h3 {
+      text-align: center;
+      color: #4b48ef;
+      font-size: 1.2rem;
+    }
+    #chat-window {
+      border: 1px solid #ccc;
+      height: 220px;
+      overflow-y: auto;
+      padding: 6px;
+      background: #f9f9f9;
+      margin-bottom: 8px;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    #userInput {
+      width: 70%;
+      padding: 7px;
+      border-radius: 5px;
+      border: 1px solid #aaa;
+      font-size: 1rem;
+    }
+    #sendBtn {
+      padding: 6px 12px;
+      border: none;
+      border-radius: 5px;
+      background: #4b48ef;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Top Navigation -->
+<div class="topbar">
+  <div class="logo">Global Impact Youth Club © 2025</div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="focus.html">Focus Areas</a>
+    <a href="contact.html">Contact</a>
+    <a href="projects.html">Projects</a>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<section>
+  <h1>Contact Us</h1>
+  <p class="subtitle">We’d love to hear from you. Connect with us today!</p>
+
+  <div class="contact-container">
+    <div>
+      <div class="info-box">
+        <h3>📧 Email</h3>
+        <p>giyclub@email.com</p>
+      </div>
+      <div class="info-box">
+        <h3>📞 Phone</h3>
+        <p>+251 900 000 000</p>
+      </div>
+      <div class="info-box">
+        <h3>📍 Location</h3>
+        <p>Addis Ababa, Ethiopia</p>
+      </div>
+    </div>
+
+    <div class="social-card">
+      <h2>Follow GIY Online</h2>
+      <ul>
+        <li>📸 Instagram: <a id="instaLink" href="https://www.instagram.com/swa_giy" target="_blank">@swa_giy</a></li>
+        <li>💬 Telegram: <a id="telegramLink" href="https://t.me/SWA_GIY" target="_blank">@SWA_GIY</a></li>
+        <li>💼 LinkedIn: <a href="https://linkedin.com" target="_blank">Global Impact Youth Club</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Floating GIY AI -->
+<button id="chatbot-btn">💬 Ask GIY AI</button>
+
+<div id="chatbot-box">
+  <h3>🤖 Ask GIY AI</h3>
+  <div id="chat-window"></div>
+  <input type="text" id="userInput" placeholder="Ask about GIY...">
+  <button id="sendBtn">Send</button>
+</div>
+
+<script>
+  // Toggle chatbot visibility
+  document.getElementById('chatbot-btn').onclick = function() {
+    const box = document.getElementById('chatbot-box');
+    box.style.display = (box.style.display === 'none') ? 'block' : 'none';
+  };
+
+  // AI responses
+  const responses = {
+    "what is giy": "GIY (Global Impact Youth Club) is a youth-led initiative in Ethiopia that empowers youth in Technology, Sustainability, Communication, Volunteering, Leadership, and Critical Thinking.",
+    "how to join": "You can join GIY by visiting our 'Join Us' page or contacting us through our social media accounts.",
+    "focus areas": "Our focus areas are Technology, Sustainability, Communication, Volunteering, Leadership, and Critical Thinking.",
+    "mission": "Our mission is to empower youth to become changemakers by giving them skills, opportunities, and platforms to thrive.",
+    "long term goals": "GIY’s long-term goals include building tech hubs, promoting sustainability, expanding leadership programs, and forming international partnerships.",
+    "president": "🌟 President: Betema Fiseha — Leads GIY with vision and courage, empowering youth to create lasting change.",
+    "co president": "🤝 Co-President: Yanet Yared — Supports leadership goals, ensures teamwork, and strengthens GIY’s initiatives.",
+    "knowledge keeper": "✉️ Knowledge Keeper: Aron Alemseged — Maintains communication and organization for the club.",
+    "fund guardian": "📊 Fund Guardian: Selihom Mehari — Manages resources responsibly and supports financial stability.",
+    "impact planner": "🎉 Impact Planners: Loza Tilahun & Ina Tariku — Coordinate impactful youth events.",
+    "digital officer": "📸 Digital Officer: Yohannes G/Hiwot — Documents projects and manages GIY’s social media content.",
+    "outreach director": "🌍 Outreach Director: Yosef — Builds partnerships and connects GIY with other organizations."
+  };
+
+  document.getElementById('sendBtn').onclick = function() {
+    let input = document.getElementById("userInput").value.toLowerCase().trim();
+    let chatWindow = document.getElementById("chat-window");
+    if (input === "") return;
+
+    chatWindow.innerHTML += `<p><strong>You:</strong> ${input}</p>`;
+
+    let reply = responses[input] || "Sorry, I don’t have that information yet. Please contact us through our social media!";
+    chatWindow.innerHTML += `<p><strong>GIY AI:</strong> ${reply}</p>`;
+
+    document.getElementById("userInput").value = "";
+    chatWindow.scrollTop = chatWindow.scrollHeight;
+  };
+</script>
+
+</body>
+</html>

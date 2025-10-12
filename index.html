@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Impact Youth Club (GIY)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgb(243, 232, 232);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    /* Top colorful navigation bar */
+    .topbar {
+      background: linear-gradient(90deg, #4b48ef);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px 50px;
+      flex-wrap: wrap;
+    }
+    .topbar .logo {
+      font-weight: bold;
+      font-size: 1.8rem;
+    }
+    .topbar a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    .topbar a:hover {
+      color: yellow;
+    }
+
+    /* Hero section */
+    header {
+      color: black;
+      padding: 80px 20px;
+      background: #f5f5f5;
+    }
+    .hero-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .hero-text {
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+    }
+    .hero-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .hero-text p {
+      font-size: 1.3rem;
+      color: #333;
+    }
+    .hero-image {
+      flex: 1;
+      min-width: 250px;
+      text-align: center;
+    }
+    .hero-image img {
+      max-width: 400px;
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Info Sections */
+    section.info {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px 20px;
+      text-align: center;
+    }
+    section.info p, section.info ul {
+      text-align: justify;
+      margin: auto 0;
+      max-width: 800px;
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+    section.info h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    section.info ul li {
+      margin-bottom: 12px;
+    }
+
+    /* Footer */
+    footer {
+      background: #4b48ef;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-text, .hero-image {
+        min-width: 100%;
+      }
+      .hero-text h1 {
+        font-size: 2rem;
+      }
+      .hero-text p {
+        font-size: 1.1rem;
+      }
+      .hero-image img {
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Top colorful navigation bar -->
+<div class="topbar">
+  <div class="logo">Global Impact Youth Club © 2025</div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="focus.html">Focus Areas</a>
+    <a href="contact.html">Contact</a>
+    <a href="projects.html">Projects</a>
+  </div>
+</div>
+
+<!-- Hero Section -->
+<header>
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Empowering Youth. Impacting the World.</h1>
+      <p>Technology • Sustainability • Communication • Volunteering • Leadership • Critical Thinking</p>
+    </div>
+    <div class="hero-image">
+      <img src="GIY.png" alt="GIY Club" />
+    </div>
+  </div>
+</header>
+
+<!-- What is GIY Section -->
+<section class="info">
+  <h1>What is GIY?</h1>
+  <p>
+    The Global Impact Youth Club (GIY) is a youth-led initiative founded in Ethiopia with the mission of empowering young people to become active drivers of positive change.
+    GIY is more than just a club — it is a movement where passionate and creative youth come together to learn, lead, and act on issues that matter most to their communities and to the world.
+    We believe that young people are not just the leaders of tomorrow, but also changemakers today, and we provide them with the skills, opportunities, and platforms they need to thrive.
+  </p>
+</section>
+
+<!-- Benefits Section -->
+<section class="info">
+  <h1>Benefits You Will Get After Being a Member</h1>
+  <ul>
+    <li><strong>Skill Development:</strong> Gain practical skills in technology, leadership, communication, project management, and problem-solving.</li>
+    <li><strong>Networking & Mentorship:</strong> Connect with like-minded youth, leaders, and professionals.</li>
+    <li><strong>Volunteering Opportunities:</strong> Participate in community service projects to create real change.</li>
+    <li><strong>Exclusive Opportunities:</strong> Access competitions, conferences, and international youth collaborations.</li>
+    <li><strong>Recognition & Certificates:</strong> Receive awards and certificates that strengthen your profile.</li>
+    <li><strong>Supportive Community:</strong> Become part of an inspiring family of changemakers.</li>
+  </ul>
+</section>
+
+<!-- Long-term Goals Section -->
+<section class="info">
+  <h1>Long Term Goals</h1>
+  <ul>
+    <li><strong>Build Community Tech Hubs:</strong> Establish innovation centers with resources and mentorship.</li>
+    <li><strong>Promote Sustainability:</strong> Launch environmental projects like tree planting and recycling campaigns.</li>
+    <li><strong>Expand Leadership Programs:</strong> Train youth through leadership academies.</li>
+    <li><strong>Strengthen Volunteer Networks:</strong> Grow networks of volunteers across Ethiopia and beyond.</li>
+    <li><strong>Expand International Collaborations:</strong> Partner with youth clubs and NGOs worldwide.</li>
+  </ul>
+</section>
+
+<!-- Floating GIY AI Button -->
+<button id="chatbot-btn" style="
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    background: #4b48ef;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 1000;
+">💬 Ask GIY AI</button>
+
+<!-- Hidden Chatbot Box -->
+<div id="chatbot-box" style="
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 110px;
+    width: 320px;
+    background: white;
+    border: 2px solid #4b48ef;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+">
+  <h3 style="text-align:center; color:#4b48ef;">🤖 Ask GIY AI</h3>
+  <div id="chat-window" style="border:1px solid #ccc; height:230px; overflow-y:auto; padding:5px; background:#f9f9f9; margin-bottom:8px;"></div>
+  <input type="text" id="userInput" placeholder="Ask about GIY..." style="width:72%; padding:5px; border-radius:5px; border:1px solid #aaa;">
+  <button id="sendBtn" style="padding:5px 10px; border:none; border-radius:5px; background:#28a745; color:white; font-weight:bold; cursor:pointer;">Send</button>
+</div>
+
+<script>
+  // Toggle chatbot visibility
+  document.getElementById('chatbot-btn').onclick = function() {
+    const box = document.getElementById('chatbot-box');
+    box.style.display = (box.style.display === 'none' || box.style.display === '') ? 'block' : 'none';
+  };
+
+  const bodMembers = {
+    "president": { name: "Betsema Fiseha", mission: "Provides leadership and sets the vision for GIY." },
+    "co president": { name: "Yanet Yared", mission: "Supports the president, maintains websites, and oversees projects." },
+    "treasurer": { name: "Selihom Mehari", mission: "Manages finances and budgeting." },
+    "knowledge keeper": { name: "Saron Alemseged", mission: "Handles communication and documentation." },
+    "digital officer": { name: "Yohannes G/Hiwot", mission: "Maintains the account and technical tools." },
+    "impact planner": { name: "Loza Tilahun and Sina Tariku", mission: "Plans, organizes, and executes events." },
+    "outreach director": { name: "Daniel Mekonnen", mission: "Communicates with other clubs and brings sponsors." }
+  };
+
+  const focusAreas = ["Technology", "Sustainability", "Communication", "Volunteering", "Leadership", "Critical Thinking", "Artificial Intelligence (AI)"];
+
+  // AI chat logic
+  document.getElementById('sendBtn').onclick = function() {
+    let input = document.getElementById("userInput").value.toLowerCase().trim();
+    let chatWindow = document.getElementById("chat-window");
+    if (!input) return;
+
+    chatWindow.innerHTML += "<p><strong>You:</strong> " + document.getElementById("userInput").value + "</p>";
+    let reply = "I'm not sure about that yet 🤔. Please reach out to us through our Instagram, TikTok, or LinkedIn for more details!";
+
+    const rolesInOrder = Object.keys(bodMembers).sort((a,b)=>b.length-a.length);
+    for (const role of rolesInOrder) {
+      if (input.includes(role) || input.includes("who is " + role) || input.includes(role + " of giy")) {
+        reply = `The ${role.charAt(0).toUpperCase() + role.slice(1)} is ${bodMembers[role].name}. Mission: ${bodMembers[role].mission}`;
+        break;
+      }
+    }
+
+    if (input.includes("focus") || input.includes("areas")) reply = "GIY focuses on: " + focusAreas.join(", ") + ".";
+    if (input.includes("certificate")) reply = "GIY provides paid certificates, and the funds are used for charity purposes and recognizing achievements.";
+    if (input.includes("mission")) reply = "GIY’s mission is to empower youth to become active drivers of positive change through leadership, technology, sustainability, and innovation.";
+    if (input.includes("what is giy") || input.includes("about giy")) reply = "The Global Impact Youth Club (GIY) is a youth-led organization that empowers young people through technology, sustainability, leadership, volunteering, and critical thinking.";
+
+    chatWindow.innerHTML += "<p><strong>GIY AI:</strong> " + reply + "</p>";
+    chatWindow.scrollTop = chatWindow.scrollHeight;
+    document.getElementById("userInput").value = "";
+  };
+</script>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special Events - GIY</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f0f4ff, #d6e0ff);
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Top Navigation */
+    .topbar {
+      background: #4b48ef;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px 50px;
+      flex-wrap: wrap;
+    }
+    .topbar .logo {
+      font-weight: bold;
+      font-size: 1.8rem;
+    }
+    .topbar a {
+      color: white;
+      text-decoration: none;
+      margin: 10px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    .topbar a:hover {
+      color: #a0c0ff;
+    }
+
+    /* Section */
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      color: #222;
+      margin-bottom: 40px;
+    }
+
+    /* Accordion styles */
+    .accordion {
+      background-color: #4b48ef;
+      color: white;
+      cursor: pointer;
+      padding: 15px 20px;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      text-align: left;
+      outline: none;
+      font-size: 1.1rem;
+      transition: background-color 0.3s;
+      margin-bottom: 10px;
+    }
+    .accordion:hover {
+      background-color: #3a3ccc;
+    }
+     .active, .accordion:hover {
+      background-color: #c5c5ff;
+    }
+    .panel {
+      padding: 0 20px 20px 20px;
+      display: none;
+      background-color: #e0e6ff;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .panel p {
+      margin: 10px 0;
+      color: #222;
+    }
+
+    /* Side-by-side images */
+    .panel .images {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .panel .images img {
+      width: calc(50% - 5px);
+      border-radius: 8px;
+    }
+
+    /* Responsive: stack images on small screens */
+    @media (max-width: 600px) {
+      .panel .images img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Top Navigation -->
+<div class="topbar">
+  <div class="logo">Global Impact Youth Club © 2025</div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="focus.html">Focus Areas</a>
+    <a href="contact.html">Contact</a>
+    <a href="projects.html">Projects</a>
+  </div>
+</div>
+
+<!-- Special Events Section -->
+<section>
+  <h1>Special Events</h1>
+
+  <button class="accordion">Teacher's Day</button>
+  <div class="panel">
+    <p class="date">Date: October 10, 2025</p>
+    <p class="description">Teacher’s Day was celebrated in the staff area after class. There were food items including popcorn, traditional Ethiopian bread, coffee, and other treats. In addition to the food, the celebration featured a ketema (a type of grass) and an etan, a fragrant Ethiopian smoke, creating a warm and cultural atmosphere honoring our teachers.</p>
+    <div class="images">
+      <img src="GIY.png" alt="Teacher's Day Image 1">
+      <img src="GIY.png" alt="Teacher's Day Image 2">
+    </div>
+  </div>
+
+</section>
+
+<script>
+  // Accordion logic
+  const accordions = document.querySelectorAll(".accordion");
+  accordions.forEach(acc => {
+    acc.addEventListener("click", () => {
+      const panel = acc.nextElementSibling;
+      panel.style.display = panel.style.display === "block" ? "none" : "block";
+    });
+  });
+</script>
+
+</body>
+</html>
