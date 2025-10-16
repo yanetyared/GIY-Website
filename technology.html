@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technology Projects - GIY</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    /* Top Navigation */
+    .topbar {
+      background: #4b48ef;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px 50px;
+      flex-wrap: wrap;
+    }
+    .topbar .logo {
+      font-weight: bold;
+      font-size: 1.8rem;
+    }
+    .topbar a {
+      color: white;
+      text-decoration: none;
+      margin: 10px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    .topbar a:hover {
+      color: yellow;
+    }
+
+    /* Section */
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    /* Accordion Style */
+    .accordion {
+      background-color: #3a3ccc;
+      color: white;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 1.2rem;
+      transition: 0.4s;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .active, .accordion:hover {
+      background-color: #c5c5ff;
+    }
+
+    .panel {
+      padding: 10px 18px 20px 18px;
+      display: none;
+      background-color: #f0f0ff;
+      overflow: hidden;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .panel table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 15px;
+    }
+
+    .panel table, th, td {
+      border: 1px solid #999;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    .panel img {
+      max-width: 48%;
+      margin: 1%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .image-description {
+      text-align: center;
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <div class="topbar">
+    <div class="logo">Global Impact Youth Club © 2025</div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="focus.html">Focus Areas</a>
+      
+      <a href="contact.html">Contact</a>
+      <a href="projects.html">Projects</a>
+    </div>
+  </div>
+
+  <!-- Technology Section -->
+  <section>
+    <h1>Technology Projects</h1>
+
+    <!-- Course Accordion -->
+    <button class="accordion">💻 Our Technology Course</button>
+    <div class="panel">
+      <p>GIY offers a comprehensive Technology course that includes coding, AI, and digital innovation. Below are the course modules:</p>
+
+      <!-- Course Table -->
+      <table>
+        <tr>
+          <th>Lesson</th>
+          <th>Description</th>
+          <th>Duration</th>
+        </tr>
+        <tr>
+          <td>Artifical Intelligence and Machine Learning</td>
+          <td>The goal of this lesson is to help students understand the basics of artificial intelligence and how machines think.
+Real life examples like chat bots, voice assistants, translation apps.
+Simple  ideas of algorithms and data.
+Introduction to machine learning with the help of YouTube recommendations.
+AI in daily life. Smart homes, phones, and social media.
+Impacts of AI in our day to day life.
+</td>
+          <td>4 Weeks</td>
+        </tr>
+        <tr>
+          <td>Automation</td>
+          <td>The goal of this lesson is to show how machines and robots make work more efficient and effective.
+What is automation? What is the difference between manual and automated work?
+Automation in factories. Robots assembling cars, drones, packages, phones, etc… and even themselves.
+Automation in transport. Self driving cars, drones and delivery systems.
+Impacts of automation on human lives. 
+</td>
+          <td>6 Weeks</td>
+        </tr>
+        <tr>
+          <td>Future Tech and Innovation</td>
+          <td>The goal of this lesson is to explore new technologies shaping our world and how to stay updated.
+Space Tech. Satellites, rockets, and how these innovations help us and our environment (GPS, Communication, Weather).
+Green Tech. Solar panels, wind energy, electricity.
+Bio Tech. New medicines, food science, lab grown meat.
+How to spot new trends concerning technological advancements?
+How do new ideas blossom? 
+Tracking innovation through social media, news, or websites.
+</td>
+          <td>5 Weeks</td>
+        </tr>
+        <tr>
+          <td>Hands on tech skills</td>
+          <td>The goal of this lesson is to set the right path for students who wish to enter the field of technology in any way.
+Getting started on web development and web design (HTML & CSS)
+The basics of app development, design, and prototyping.
+Coding logic. What is a code? What are the different types of programming languages? What are the purposes of these programming languages (Python, Java, C, C++, etc…).
+How to use a professional camera and its features.</td>
+        </tr>
+        <tr>
+          <td>Class Work</td>
+          <td>Students will write a short essay on the topic they were most interested in.</td>
+        </tr>
+      </table>
+       <p>NB: The following lessons are given to students by students. These lessons have been reviewed by teachers in the field of technology. </p>
+      <!-- Images with descriptions -->
+      <div style="display:flex; justify-content:center; flex-wrap:wrap; margin-bottom:15px;">
+        <div style="text-align:center; width:48%; margin:1%;">
+          <img src="tech_image1.jpg" alt="Tech Workshop">
+          <p class="image-description">Students working on AI projects during a workshop.</p>
+        </div>
+        <div style="text-align:center; width:48%; margin:1%;">
+          <img src="tech_image2.jpg" alt="Web Development">
+          <p class="image-description">Building web applications as part of the course.</p>
+        </div>
+      </div>
+    </div>
+
+   
+
+  </section>
+
+  <script>
+    // Accordion functionality
+    const accordions = document.querySelectorAll(".accordion");
+    accordions.forEach(acc => {
+      acc.addEventListener("click", function() {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        panel.style.display = (panel.style.display === "block") ? "none" : "block";
+      });
+    });
+  </script>
+
+</body>
+</html>
