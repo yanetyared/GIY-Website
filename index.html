@@ -227,101 +227,52 @@
   <button id="sendBtn" style="padding:5px 10px; border:none; border-radius:5px; background:#28a745; color:white; font-weight:bold; cursor:pointer;">Send</button>
 </div>
 <script>
-  // -----------------------------
-  // Chatbot Toggle
-  // -----------------------------
+  // Toggle chatbot visibility
   document.getElementById('chatbot-btn').onclick = function() {
     const box = document.getElementById('chatbot-box');
-    box.style.display = (box.style.display === 'none' || box.style.display === '') ? 'block' : 'none';
+    box.style.display = (box.style.display === 'none') ? 'block' : 'none';
   };
 
-  // -----------------------------
-  // BOD Members & Focus Areas
-  // -----------------------------
-  const bodMembers = {
-    president: { name: "Betema Fiseha", mission: "Leads GIY with vision and courage, empowering youth to create lasting change." },
-    "co president": { name: "Yanet Yared", mission: "Supports leadership goals, ensures teamwork, and strengthens GIY’s initiatives." },
-    "knowledge keeper": { name: "Aron Alemseged", mission: "Maintains communication and organization for the club." },
-    "fund guardian": { name: "Selihom Mehari", mission: "Manages resources responsibly and supports financial stability." },
-    "impact planner": { name: "Loza Tilahun & Ina Tariku", mission: "Coordinate impactful youth events." },
-    "digital officer": { name: "Yohannes G/Hiwot", mission: "Documents projects and manages GIY’s social media content." },
-    "outreach director": { name: "Yosef Taddese", mission: "Builds partnerships and connects GIY with other organizations." }
+  // AI responses
+  const responses = {
+    "what is giy": "GIY (Global Impact Youth Club) is a youth-led initiative in Ethiopia that empowers youth in Technology, Sustainability, Communication, Volunteering, Leadership, and Critical Thinking.",
+    "how to join": "You can join GIY by visiting our 'Join Us' page or contacting us through our social media accounts.",
+    "focus areas": "Our focus areas are Technology, Sustainability, Communication, Volunteering, Leadership, and Critical Thinking.",
+    "mission": "Our mission is to empower youth to become changemakers by giving them skills, opportunities, and platforms to thrive.",
+    "long term goals": "GIY’s long-term goals include building tech hubs, promoting sustainability, expanding leadership programs, and forming international partnerships.",
+    "president": "🌟 President: Betema Fiseha — Leads GIY with vision and courage, empowering youth to create lasting change.",
+    "co president": "🤝 Co-President: Yanet Yared — Supports leadership goals, ensures teamwork, and strengthens GIY’s initiatives.",
+    "knowledge keeper": "✉️ Knowledge Keeper: Aron Alemseged — Maintains communication and organization for the club.",
+    "fund guardian": "📊 Fund Guardian: Selihom Mehari — Manages resources responsibly and supports financial stability.",
+    "impact planner": "🎉 Impact Planners: Loza Tilahun & Ina Tariku — Coordinate impactful youth events.",
+    "digital officer": "📸 Digital Officer: Yohannes G/Hiwot — Documents projects and manages GIY’s social media content.",
+    "outreach director": "🌍 Outreach Director: Yosef Taddese — Builds partnerships and connects GIY with other organizations.",
+    "Hi": "Hi,I am GIY AI and i can assist with your GIY focused question.",
+    "Hii": "Hi,I am GIY AI and i can assist with your GIY focused question.",
+    "Hello": "Hello,I am GIY AI and i can assist with your GIY focused question."
   };
 
-  const focusAreas = ["Technology", "Sustainability", "Communication", "Volunteering", "Leadership", "Critical Thinking"];
-
-  // -----------------------------
-  // Predefined Responses
-  // -----------------------------
-  const greetings = ["hi", "hii", "hello"];
-
-  // -----------------------------
-  // Chat Logic
-  // -----------------------------
+  // Chat system
   document.getElementById('sendBtn').onclick = function() {
-    const inputRaw = document.getElementById("userInput").value.trim();
-    if (!inputRaw) return;
+    let input = document.getElementById("userInput").value.toLowerCase().trim();
+    let chatWindow = document.getElementById("chat-window");
+    if (input === "") return;
 
-    const input = inputRaw.toLowerCase();
-    const chatWindow = document.getElementById("chat-window");
+    chatWindow.innerHTML += `<p><strong>You:</strong> ${input}</p>`;
 
-    // Display user message
-    chatWindow.innerHTML += `<p><strong>You:</strong> ${inputRaw}</p>`;
-
-    let reply = "I'm not sure about that yet 🤔. Please reach out to us through our Instagram, TikTok, or LinkedIn for more details!";
-
-    // 1. Greetings
-    if (greetings.includes(input)) {
-      reply = "Hi! I am GIY AI and I can assist with your GIY-focused questions.";
-    }
-
-    // 2. About GIY
-    else if (input.includes("what is giy") || input.includes("about giy")) {
-      reply = "The Global Impact Youth Club (GIY) is a youth-led organization in Ethiopia that empowers young people through Technology, Sustainability, Leadership, Volunteering, and Critical Thinking.";
-    }
-
-    // 3. Mission
-    else if (input.includes("mission")) {
-      reply = "GIY’s mission is to empower youth to become active drivers of positive change through leadership, technology, sustainability, and innovation.";
-    }
-
-    // 4. Focus Areas
-    else if (input.includes("focus") || input.includes("areas")) {
-      reply = "GIY focuses on: " + focusAreas.join(", ") + ".";
-    }
-
-    // 5. Certificates
-    else if (input.includes("certificate")) {
-      reply = "GIY provides paid certificates, and the funds are used for charity purposes and recognizing achievements.";
-    }
-
-    // 6. Role-based Questions
-    else {
-      const roles = Object.keys(bodMembers).sort((a, b) => b.length - a.length); // longer first
-      for (const role of roles) {
-        if (input.includes(role) || input.includes("who is " + role) || input.includes(role + " of giy")) {
-          reply = `The ${role.charAt(0).toUpperCase() + role.slice(1)} is ${bodMembers[role].name}. Mission: ${bodMembers[role].mission}`;
-          break;
-        }
-      }
-    }
-
-    // Display chatbot reply
+    let reply = responses[input] || "Sorry, I don’t have that information yet. Please contact us through our social media!";
     chatWindow.innerHTML += `<p><strong>GIY AI:</strong> ${reply}</p>`;
-    chatWindow.scrollTop = chatWindow.scrollHeight;
 
-    // Clear input
     document.getElementById("userInput").value = "";
+    chatWindow.scrollTop = chatWindow.scrollHeight;
   };
 </script>
-
-<!-- Footer Section -->
 <footer style="background-color: #4b48ef; padding: 20px 10px; color: white; font-family: 'Segoe UI', sans-serif;">
   <p style="text-align: center; margin: 0; font-size: 12px;">
     © 2025 Global Impact Youth Club | All Rights Reserved
   </p>
 </footer>
 
-
+</footer>
 </body>
 </html>
