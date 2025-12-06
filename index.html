@@ -274,7 +274,8 @@
     "fund guardian": "📊 Fund Guardian: Selihom Mehari — Manages resources responsibly and supports financial stability.",
     "impact planner": "🎉 Impact Planners: Loza Tilahun & Ina Tariku — Coordinate impactful youth events.",
     "digital officer": "📸 Digital Officer: Yohannes G/Hiwot — Documents projects and manages GIY’s social media content.",
-    "outreach director": "🌍 Outreach Director: Yosef Taddese — Builds partnerships and connects GIY with other organizations."
+    "outreach director": "🌍 Outreach Director: Josef Tadesse — Builds partnerships and connects GIY with other organizations.",
+    "Hello": "Helloooo!! What can I help you with"
   };
 
   document.getElementById('sendBtn').onclick = function() {
@@ -299,6 +300,12 @@
     // Join
     else if (input.includes("join")) {
       reply = responses["how to join"];
+    }
+     else if (input.includes("Hi")) {
+      reply = responses["Hello"];
+    }
+     else if (input.includes("Hello")) {
+      reply = responses["Hello"];
     }
     // Focus areas
     else if (input.includes("focus") || input.includes("areas")) {
