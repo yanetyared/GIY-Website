@@ -67,15 +67,19 @@
     .accordion:hover {
       background-color: #3a3ccc;
     }
-     .active, .accordion:hover {
+    .accordion.active {
       background-color: #c5c5ff;
+      color: #222;
     }
+
     .panel {
-      padding: 0 20px 20px 20px;
-      display: none;
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
       background-color: #e0e6ff;
       border-radius: 5px;
       margin-bottom: 10px;
+      transition: max-height 0.3s ease;
     }
     .panel p {
       margin: 10px 0;
@@ -120,29 +124,73 @@
 <section>
   <h1>Special Events</h1>
 
+  <!-- Teacher's Day -->
   <button class="accordion">Teacher's Day</button>
   <div class="panel">
     <p class="date">Date: October 10, 2025</p>
-    <p class="description">Teacher’s Day was celebrated in the staff area after class. There were food items including popcorn, traditional Ethiopian bread, coffee, and other treats. In addition to the food, the celebration featured a ketema (a type of grass) and an etan, a fragrant Ethiopian smoke, creating a warm and cultural atmosphere honoring our teachers.</p>
+    <p class="description">
+      Teacher’s Day was celebrated in the staff area after class. There were food items including popcorn, traditional Ethiopian bread, coffee, and other treats. In addition to the food, the celebration featured a ketema (a type of grass) and an etan, a fragrant Ethiopian smoke, creating a warm and cultural atmosphere honoring our teachers.
+    </p>
     <div class="images">
-      <img src="teachs2.jpg" alt="Teacher's Day Image 1">
-      <img src="teachs1.jpg" alt="Teacher's Day Image 2">
+      <img src="teachs2.jpg" alt="Teachers celebrating with coffee and treats">
+      <img src="teachs1.jpg" alt="Teachers enjoying the celebration">
+    </div>
+  </div>
+
+  <!-- Appreciation Day -->
+  <button class="accordion">Appreciation Day</button>
+  <div class="panel">
+    <p class="date">Date: January 21, 2026</p>
+    <p class="description">
+      Appreciation Day was organized through a collaboration between the Global Impact Club and the Interact Club. The event was dedicated to appreciating our school cleaners for their hard work and dedication. It took place on the eve of Christmas and created a warm and joyful atmosphere. During the celebration, we presented them with gifts as a token of gratitude.
+    </p>
+    <p class="description">
+      There was also a traditional Ethiopian coffee ceremony, and the space was beautifully decorated to make the event special and memorable for everyone.
+    </p>
+    <div class="images">
+      <img src="ap 1.png" alt="Cleaners being appreciated">
+      <img src="ap 2.png" alt="Coffee ceremony and decorations">
+    </div>
+  </div>
+
+  <!-- Open House Conference -->
+  <button class="accordion">Open House Conference</button>
+  <div class="panel">
+    <p class="date">Date: Saturday </p>
+    <p class="description">
+      The Open House Conference was organized for parents to learn more about their children’s progress and achievements. During the event, parents and students had meaningful discussions about the students’ academic performance, and report cards were distributed.
+    </p>
+    <p class="description">
+      In addition, we displayed our club projects, including initiatives like cleaning and community service. Students also received certificates, which were presented to their parents.
+    </p>
+    <p class="description">
+      We took the opportunity to explain the mission and activities of the Global Impact Youth Club, which received great support and appreciation from both parents and students. The event was a wonderful chance to celebrate achievements and strengthen the school community.
+    </p>
+    <div class="images">
+      <img src="open 1.png" alt="Open House Conference Image 1">
+      <img src="open 2.png" alt="Open House Conference Image 2">
     </div>
   </div>
 
 </section>
 
 <script>
-  // Accordion logic
+  // Accordion logic with smooth animation and active class
   const accordions = document.querySelectorAll(".accordion");
   accordions.forEach(acc => {
     acc.addEventListener("click", () => {
+      acc.classList.toggle("active");
       const panel = acc.nextElementSibling;
-      panel.style.display = panel.style.display === "block" ? "none" : "block";
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+      // Update aria-expanded for accessibility
+      acc.setAttribute("aria-expanded", panel.style.maxHeight ? "true" : "false");
     });
   });
 </script>
-
 
 </body>
 </html>

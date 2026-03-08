@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sustainability Projects - GIY</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+background:#f5f5f5;
+margin:0;
+padding:0;
+line-height:1.6;
+}
+
+/* Top Navigation */
+
+.topbar{
+background:#4b48ef;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:40px 50px;
+flex-wrap:wrap;
+}
+
+.topbar .logo{
+font-weight:bold;
+font-size:1.8rem;
+}
+
+.topbar a{
+color:white;
+text-decoration:none;
+margin:10px;
+font-weight:bold;
+transition:color 0.3s;
+}
+
+.topbar a:hover{
+color:yellow;
+}
+
+/* Section */
+
+section{
+max-width:1000px;
+margin:auto;
+padding:40px 20px;
+}
+
+h1{
+text-align:center;
+margin-bottom:20px;
+color:#333;
+}
+
+/* Accordion */
+
+.accordion{
+background:#3a3ccc;
+color:white;
+cursor:pointer;
+padding:18px;
+width:100%;
+border:none;
+text-align:left;
+font-size:1.2rem;
+border-radius:8px;
+margin-bottom:10px;
+}
+
+.active, .accordion:hover{
+background:#c5c5ff;
+}
+
+.panel{
+display:none;
+padding:20px;
+background:#f0f0ff;
+border-radius:8px;
+margin-bottom:15px;
+}
+
+.panel img{
+max-width:48%;
+margin:1%;
+border-radius:10px;
+box-shadow:0 4px 8px rgba(0,0,0,0.2);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Top Navigation -->
+
+<div class="topbar">
+
+<div class="logo">Global Impact Youth Club © 2025</div>
+
+<div>
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="focus.html">Focus Areas</a>
+<a href="contact.html">Contact</a>
+<a href="projects.html">Projects</a>
+</div>
+
+</div>
+
+
+<section>
+
+<h1>Sustainability Projects</h1>
+
+<!-- Cleaning Activity -->
+
+<button class="accordion">🧹 School Cleaning Activity</button>
+
+<div class="panel">
+
+<p>
+As part of our sustainability and community service activities, the Global Impact Youth Club organized a school cleaning event. During this activity, club members worked together to clean different areas of the school compound.
+</p>
+
+<p>
+The goal of this event was not only to keep our school environment clean but also to support our school cleaners. Students personally helped the cleaners with their daily tasks so that their workload would become easier.
+</p>
+
+<p>
+During the activity, the cleaners were able to sit down and take a rest while students helped with the cleaning work. This was our way of showing appreciation and respect for the important work they do every day for our school community.
+</p>
+
+<div style="display:flex; justify-content:center; flex-wrap:wrap;">
+<img src="e 1.png" alt="Students cleaning school">
+<img src="e 2.png" alt="Helping school cleaners">
+</div>
+
+</div>
+
+
+</section>
+
+
+<script>
+
+const accordions = document.querySelectorAll(".accordion");
+
+accordions.forEach(acc=>{
+acc.addEventListener("click", function(){
+
+this.classList.toggle("active");
+
+const panel = this.nextElementSibling;
+
+panel.style.display = panel.style.display === "block" ? "none" : "block";
+
+});
+});
+
+</script>
+
+
+</body>
+</html>
